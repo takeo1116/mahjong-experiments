@@ -1,0 +1,58 @@
+# Generated / heavy experiment artifacts
+runs/
+**/runs/
+driver_logs/
+**/driver_logs/
+outputs/
+**/outputs/
+logs/
+**/logs/
+checkpoints/
+**/checkpoints/
+artifacts/
+**/artifacts/
+
+# Raw or bulky run outputs
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.parquet
+*.jsonl
+*.log
+
+# Local caches
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+
+# Historical Stage01/Stage02 import policy:
+# keep only experiment markdown documents that explain plans/results/reviews.
+Stage01_DiscardOnly/**
+!Stage01_DiscardOnly/**/
+!Stage01_DiscardOnly/**/runbook.md
+!Stage01_DiscardOnly/**/report.md
+!Stage01_DiscardOnly/**/bug_report.md
+!Stage01_DiscardOnly/**/claude_code_review.md
+
+Stage02_CallUnlock/**
+!Stage02_CallUnlock/**/
+!Stage02_CallUnlock/**/runbook.md
+!Stage02_CallUnlock/**/report.md
+!Stage02_CallUnlock/**/bug_report.md
+!Stage02_CallUnlock/**/claude_code_review.md
+
+Stage03_RiichiEnvSelfPlay/**
+!Stage03_RiichiEnvSelfPlay/**/
+!Stage03_RiichiEnvSelfPlay/**/runbook.md
+!Stage03_RiichiEnvSelfPlay/**/report.md
+!Stage03_RiichiEnvSelfPlay/**/bug_report.md
+!Stage03_RiichiEnvSelfPlay/**/claude_code_review.md
+
+# Stage templates are local scaffolding unless explicitly promoted.
+_template/
